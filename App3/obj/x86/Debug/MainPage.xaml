@@ -1,0 +1,68 @@
+﻿<Page x:ConnectionId='1'
+    x:Class="App3.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App3"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:media="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:Windows10FallCreatorsUpdate="http://schemas.microsoft.com/winfx/2006/xaml/presentation?IsApiContractPresent(Windows.Foundation.UniversalApiContract, 5)"
+    mc:Ignorable="d"                     
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Page.Resources>
+        <Windows10FallCreatorsUpdate:AcrylicBrush x:Key="CustomAcrylicBackgroundBrush" BackgroundSource="HostBackdrop"
+        TintOpacity="-2" TintColor="#FF000000" FallbackColor="Black" />
+    </Page.Resources>
+
+    <Grid Background="{StaticResource CustomAcrylicBackgroundBrush}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.33*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0" VerticalAlignment="Stretch" HorizontalAlignment="Center">
+            <TextBlock x:ConnectionId='4' x:Name="WelcomeText" Text="Chào mừng đến hệ thống đối tác Stuhub" FontSize="40" Translation="0,-200,0" 
+                       TextWrapping="Wrap" TextAlignment="Center"  VerticalAlignment="Top" Margin="30,200,30,0" FontWeight="Bold" Opacity="0" >
+                <TextBlock.OpacityTransition>
+                    <ScalarTransition Duration="0:0:3"/>
+                </TextBlock.OpacityTransition>
+                <TextBlock.TranslationTransition>
+                    <Vector3Transition Duration="0:0:3"/>
+                </TextBlock.TranslationTransition>
+
+            </TextBlock>
+            <Image x:ConnectionId='5' x:Name="TutorLogo" Source="/Assets/TutorLogo.png" Margin="100" Opacity="0" Translation="0,200,0">
+                <Image.OpacityTransition>
+                    <ScalarTransition Duration="0:0:3"/>
+                </Image.OpacityTransition>
+                <Image.TranslationTransition>
+                    <Vector3Transition Duration="0:0:3"/>
+                </Image.TranslationTransition>
+            </Image>
+          
+        </StackPanel>
+        <Grid Grid.Column="1">
+            <StackPanel  VerticalAlignment="Stretch" >
+                <TextBlock x:ConnectionId='2' x:Name="LoginText" Opacity="0" FontWeight="Bold" FontSize="40" Text="Đem Cửa Hàng Của Bạn Tới Gần Với Khách Hàng Hơn" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,200,0,200" Translation="0 -200 0">
+                <TextBlock.OpacityTransition>
+                    <ScalarTransition Duration="0:0:3"/>
+                </TextBlock.OpacityTransition>
+                <TextBlock.TranslationTransition>
+                    <Vector3Transition Duration="0:0:3"/>
+                </TextBlock.TranslationTransition>
+                </TextBlock>
+                <StackPanel x:ConnectionId='3' VerticalAlignment="Center" x:Name="Login" Opacity="0" Translation="0 200 0">
+                <TextBox VerticalAlignment="Center" Header="Username" PlaceholderText="Type Your Username" HorizontalAlignment="Stretch" Height="55"  Margin="550,5,550,5"></TextBox>
+                    <TextBox VerticalAlignment="Center" Header="Passwords" PlaceholderText="Type Your Passwords" HorizontalAlignment="Stretch" Height="55" Margin="550,5,550,5" ></TextBox>
+                    <StackPanel.OpacityTransition>
+                        <ScalarTransition Duration="0:0:3"/>
+                    </StackPanel.OpacityTransition>
+                    <StackPanel.TranslationTransition>
+                        <Vector3Transition Duration="0:0:3"/>
+                    </StackPanel.TranslationTransition>
+                </StackPanel>
+                <!--<Image Source="/Assets/wooden-planks-with-blurred-restaurant-background_1253-56.jpg" Opacity="0.7" />-->
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Page>
+
