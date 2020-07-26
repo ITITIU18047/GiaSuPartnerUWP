@@ -1,0 +1,96 @@
+﻿<Page x:ConnectionId='1'
+    x:Class="App3.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App3"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:media="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:Windows10FallCreatorsUpdate="http://schemas.microsoft.com/winfx/2006/xaml/presentation?IsApiContractPresent(Windows.Foundation.UniversalApiContract, 5)"
+    mc:Ignorable="d"                     
+    xmlns:lottie="using:Microsoft.Toolkit.Uwp.UI.Lottie" xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Page.Resources>
+        <Windows10FallCreatorsUpdate:AcrylicBrush x:Key="CustomAcrylicBackgroundBrush" BackgroundSource="HostBackdrop"
+        TintOpacity="-2" TintColor="#FF000000" FallbackColor="Black" />
+    </Page.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.33*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <muxc:AnimatedVisualPlayer x:ConnectionId='2' x:Name="LottiePlayer" Grid.Column="0" VerticalAlignment="Stretch" Stretch="UniformToFill">
+            <!--LottieVisualSource with JSON UriSource-->
+            <lottie:LottieVisualSource x:ConnectionId='17' x:Name="LottieJsonSource" UriSource="ms-appx:///Assets/Train.json"/>
+        </muxc:AnimatedVisualPlayer>
+        <muxc:AnimatedVisualPlayer x:ConnectionId='3' x:Name="LottiePlayer4" Grid.Column="1" VerticalAlignment="Stretch" Stretch="UniformToFill">
+            <!--LottieVisualSource with JSON UriSource-->
+            <lottie:LottieVisualSource x:ConnectionId='16' x:Name="LottieJsonSource4" UriSource="ms-appx:///Assets/RightBackground.json"/>
+        </muxc:AnimatedVisualPlayer>
+        <StackPanel Grid.Column="0" VerticalAlignment="Stretch" HorizontalAlignment="Center">
+            <TextBlock x:ConnectionId='14' x:Name="WelcomeText" Text="Chào mừng đến hệ thống đối tác Stuhub" FontSize="40" Translation="0,-200,0" 
+                       TextWrapping="Wrap" TextAlignment="Center"  VerticalAlignment="Top" Margin="30,200,30,30" FontWeight="Bold" Opacity="0" >
+                <TextBlock.OpacityTransition>
+                    <ScalarTransition Duration="0:0:3"/>
+                </TextBlock.OpacityTransition>
+                <TextBlock.TranslationTransition>
+                    <Vector3Transition Duration="0:0:3"/>
+                </TextBlock.TranslationTransition>
+
+            </TextBlock>
+            <Image x:ConnectionId='15' x:Name="TutorLogo" Source="/Assets/TutorLogo.png" Margin="0"
+                   Opacity="0" Translation="0,200,0" Width="150">
+                <Image.OpacityTransition>
+                    <ScalarTransition Duration="0:0:3"/>
+                </Image.OpacityTransition>
+                <Image.TranslationTransition>
+                    <Vector3Transition Duration="0:0:3"/>
+                </Image.TranslationTransition>
+            </Image>
+          
+        </StackPanel>
+        <Grid Grid.Column="1" >
+            <StackPanel  VerticalAlignment="Stretch" >
+                
+                <muxc:AnimatedVisualPlayer x:ConnectionId='10' x:Name="LottiePlayer2" Grid.Column="0" VerticalAlignment="Stretch" Stretch="UniformToFill" Width="150" Margin="0,70,0,0">
+                    <!--LottieVisualSource with JSON UriSource-->
+                    <lottie:LottieVisualSource x:ConnectionId='13' x:Name="LottieJsonSource2" UriSource="ms-appx:///Assets/HotTea.json"/>
+                </muxc:AnimatedVisualPlayer>
+                <TextBlock x:ConnectionId='11' x:Name="LoginText" Opacity="0" FontWeight="Bold" FontSize="40" Text="Đem Cửa Hàng Của Bạn Tới Gần Với Khách Hàng Hơn" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,30,0,30" Translation="0 -200 0">
+                <TextBlock.OpacityTransition>
+                    <ScalarTransition Duration="0:0:3"/>
+                </TextBlock.OpacityTransition>
+                <TextBlock.TranslationTransition>
+                    <Vector3Transition Duration="0:0:3"/>
+                </TextBlock.TranslationTransition>
+                </TextBlock>
+
+                <StackPanel x:ConnectionId='12' VerticalAlignment="Center" x:Name="Login" Opacity="0" Translation="0 200 0">
+                    <TextBox VerticalAlignment="Center" Header="Username" PlaceholderText="Type Your Username" HorizontalAlignment="Stretch" Height="55"  Margin="550,5,550,5"></TextBox>
+                    <TextBox VerticalAlignment="Center" Header="Passwords" PlaceholderText="Type Your Passwords" HorizontalAlignment="Stretch" Height="55" Margin="550,5,550,5" ></TextBox>
+                    <Button Content="Sign In" Width="100" Height="75" Margin="30"></Button>
+                    <StackPanel.OpacityTransition>
+                        <ScalarTransition Duration="0:0:3"/>
+                    </StackPanel.OpacityTransition>
+                    <StackPanel.TranslationTransition>
+                        <Vector3Transition Duration="0:0:3"/>
+                    </StackPanel.TranslationTransition>
+                </StackPanel>
+            </StackPanel>
+            <muxc:AnimatedVisualPlayer x:ConnectionId='4' x:Name="LottiePlayer5"  Width="400" VerticalAlignment="Bottom" HorizontalAlignment="Center" >
+                <!--LottieVisualSource with JSON UriSource-->
+                <lottie:LottieVisualSource x:ConnectionId='9' x:Name="LottieJsonSource5" UriSource="ms-appx:///Assets/Taco.json"/>
+            </muxc:AnimatedVisualPlayer>
+            <muxc:AnimatedVisualPlayer x:ConnectionId='5' x:Name="LottiePlayer3" Grid.Column="1" Width="400" VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                <!--LottieVisualSource with JSON UriSource-->
+                <lottie:LottieVisualSource x:ConnectionId='8' x:Name="LottieJsonSource3" UriSource="ms-appx:///Assets/Food.json"/>
+            </muxc:AnimatedVisualPlayer>
+            <muxc:AnimatedVisualPlayer x:ConnectionId='6' x:Name="LottiePlayer6"  Width="400" VerticalAlignment="Bottom" HorizontalAlignment="Left" >
+                <!--LottieVisualSource with JSON UriSource-->
+                <lottie:LottieVisualSource x:ConnectionId='7' x:Name="LottieJsonSource6" UriSource="ms-appx:///Assets/HotDog.json"/>
+            </muxc:AnimatedVisualPlayer>
+        </Grid>
+    </Grid>
+</Page>
+

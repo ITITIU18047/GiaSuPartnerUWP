@@ -45,6 +45,8 @@ namespace App3
             Login.Translation = new Vector3(0, 0, 0);
             LoginText.Opacity = 1;
             LoginText.Translation = new Vector3(0, 0, 0);
+            //HotTea.Opacity = 1;
+            //HotTea.Translation = new Vector3(0, 0, 0);
         }
     }
 }
